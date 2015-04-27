@@ -21,7 +21,7 @@
         <link href="startbootstrap-grayscale-1.0.4/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
+        <link href="startbootstrap-grayscale-1.0.4/css/carousel.css" rel="stylesheet">
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -34,6 +34,13 @@
                 background-color: rgba(248, 247, 216, 0.7);
                 position: absolute;
             }
+            h2{
+                color:  #42dca3;
+            }
+            td{
+                text-align: left;
+            }
+
         </style>
 
     </head>
@@ -88,7 +95,7 @@
                         <div class="col-md-8 col-md-offset-2">
                             <br>
                             <h1 class="Bootstrap-heading">Nicholas Mendez</h1>
-                            <h3>Developer Portfolio</h3>
+                            <h2>Developer Portfolio</h2>
                             <p class="intro-text">Driven, adaptive and fast-learning computer science undergrad always seeking opportunities that put his creativity and passionate desire for serving and
                                 learning to good use.</p>
                             <a href="#about" class="btn btn-circle page-scroll">
@@ -105,6 +112,11 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>About</h2>
+                    <p>
+                        I an currently a final year student of The University of the West Indies St. Augustine Campus. Throughout my years at the UWI I've been involved in numerous
+                        activities and initiatives which has developed myself not only as developer but as individual. I have also undertaken a number of projects, each one demanding more
+                        than the last with intention of challenging myself to reach beyond what I have been exposed to in undergrad by exploring and learning different technologies, libraries, tools and methodologies.
+                    </p>
                 </div>
             </div>
         </section>
@@ -115,7 +127,155 @@
                 <div class="container">
                     <div class="col-lg-8 col-lg-offset-2">
                         <h2>Projects</h2>
-                    </div>
+
+                            <h4>Lab Scheduler</h4>
+                            <p>A simple digital scheduling system for assigning and editing shifts for lab supervisors</p>
+
+                            <div id="carousel2" class="carousel slide carousel-fade" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel" data-slide-to="1"></li>
+                                </ol>
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="active item"><img src="img/lab1.png"></div>
+                                    <div class="item"><img src="img/lab2.png"></div>
+                                </div>
+                                <!-- Carousel nav -->
+                                <a class="carousel-control left" href="#carousel2" data-slide="prev">&lsaquo;</a>
+                                <a class="carousel-control right" href="#carousel2" data-slide="next">&rsaquo;</a>
+                            </div>
+
+                            <table class="table table-responsive">
+                                <thead>
+                                <tr>
+                                    <th>Features</th><th>Technologies Used</th><th>Libraries/Frameworks</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Adding supervisors to the system <br> Adding shifts <br> viewing Weekly Shifts <br> Deleting shifts</td><td>XAMMP server, SQL, PHP, JS, CSS, HTML</td><td>Bootstrap, jQuery</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <br><br>
+                            <h4>D.A.T.A - The Desktop Activity and Tracking Applicaion</h4>
+                            <p>A group project for an Internet Technologies course. D.A.T.A allowed users to view and interact with data usage logs taken from workstations of a computer laboratory</p>
+
+                            <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel" data-slide-to="1"></li>
+                                    <li data-target="#carousel" data-slide-to="2"></li>
+                                    <li data-target="#carousel" data-slide-to="3"></li>
+                                </ol>
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="active item"><img src="img/data1.png"></div>
+                                    <div class="item"><img src="img/data2.png"></div>
+                                    <div class="item"><img src="img/data3.png"></div>
+                                    <div class="item"><img src="img/data4.png"></div>
+                                </div>
+                                <!-- Carousel nav -->
+                                <a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
+                                <a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
+                            </div>
+
+                            <table class="table table-responsive">
+                                <thead>
+                                <tr>
+                                    <th>Features</th><th>Technologies Used</th><th>Libraries/Frameworks</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Visualizations of logged data <br> Editing/Creating data for database <br> Single Page Application <br> User Access Control <br> MVC Design Pattern</td><td>XAMMP server, SQL, PHP, JS, CSS, HTML</td><td>Bootstrap, Codeigniter, jQuery, highcharts</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <br><br>
+                            <h4>Budget-Ting</h4>
+                            <p>Application submission of the 2nd Place Winner; Team Dawn in the Telios Code Jam Competition 2015. Budget-Ting is an application that manages; dieting, cooking and grocery shopping while allowing the user to save money.</p>
+
+                            <div id="carousel3" class="carousel slide carousel-fade" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel3" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel3" data-slide-to="1"></li>
+                                        <li data-target="#carousel3" data-slide-to="2"></li>
+                                        <li data-target="#carousel3" data-slide-to="3"></li>
+                                    </ol>
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active item"><img src="img/login.png"></div>
+                                        <div class="item"><img src="img/diet.png"></div>
+                                        <div class="item"><img src="img/budget.png"></div>
+                                        <div class="item"><img src="img/list.png"></div>
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a class="carousel-control left" href="#carousel3" data-slide="prev">&lsaquo;</a>
+                                    <a class="carousel-control right" href="#carousel3" data-slide="next">&rsaquo;</a>
+                                </div>
+
+                                <table class="table table-responsive">
+                                    <thead>
+                                    <tr>
+                                        <th>Features</th><th>Technologies Used</th><th>Libraries/Frameworks</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Customizing a diet <br> Adjusting budget <br>generate meal list that minimizes wastage <br> generate shopping list</td><td>XAMMP server, SQL, PHP, JS, CSS, HTML</td><td>Google Polymer, jQuery</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            <br><br>
+                            <h4>AAP - Applicant Assessment Platform</h4>
+                            <p>As the final year group project AAP is an application which allows employers to post job openings and find the optimum applicant for the job by
+                                performing an in-depth custom search on applicants, shortlist the results and compare applicants side by side.</p>
+
+                            <div id="carousel4" class="carousel slide carousel-fade" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel4" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel4" data-slide-to="1"></li>
+                                    <li data-target="#carousel4" data-slide-to="2"></li>
+                                    <li data-target="#carousel4" data-slide-to="3"></li>
+                                    <li data-target="#carousel4" data-slide-to="4"></li>
+                                    <li data-target="#carousel4" data-slide-to="5"></li>
+                                    <li data-target="#carousel4" data-slide-to="6"></li>
+                                    <li data-target="#carousel4" data-slide-to="7"></li>
+                                </ol>
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="active item"><img src="img/aap1.png"></div>
+                                    <div class="item"><img src="img/aap2.png"></div>
+                                    <div class="item"><img src="img/aap3.png"></div>
+                                    <div class="item"><img src="img/aap4.png"></div>
+                                    <div class="item"><img src="img/aap5.png"></div>
+                                    <div class="item"><img src="img/aap6.png"></div>
+                                    <div class="item"><img src="img/aap7.png"></div>
+                                    <div class="item"><img src="img/aap8.png"></div>
+                                </div>
+                                <!-- Carousel nav -->
+                                <a class="carousel-control left" href="#carousel4" data-slide="prev">&lsaquo;</a>
+                                <a class="carousel-control right" href="#carousel4" data-slide="next">&rsaquo;</a>
+                            </div>
+
+                            <table class="table table-responsive">
+                                <thead>
+                                <tr>
+                                    <th>Features</th><th>Technologies Used</th><th>Libraries/Frameworks</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Posting Jobs<br> Searching Applicants <br> Increase an applicants rating by terms found in their CV <br> Search and Sort results <br> Shortlist Applicants <br> Save/Load Searches </td><td>XAMMP server, SQL, PHP, JS, CSS, HTML</td><td>Bootstrap, jQuery, highcharts, <br> smalot, slimPHP, wenzhixin bootstrap table</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                 </div>
             </div>
         </section>
@@ -160,7 +320,7 @@
         <!-- Footer -->
         <footer>
             <div class="container text-center">
-                <p>Copyright &copy; Snickdx 2015</p>
+                <p>Copyright &copy; snickdx.github.io 2015</p>
             </div>
         </footer>
 
@@ -179,6 +339,9 @@
         <!-- Custom Theme JavaScript -->
         <script src="startbootstrap-grayscale-1.0.4/js/grayscale.js"></script>
 
+        <script>
+            $('.carousel').carousel();
+        </script>
     </body>
 
 </html>
