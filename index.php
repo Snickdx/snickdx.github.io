@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+    $count_my_page = ("hitcounter.txt");
+    $hits = file($count_my_page);
+    $hits[0]++;
+    if($hits[0]%100==0){
+        $msg = wordwrap($hits[0]." Total visitors on snickdx.github.io!");
+        mail("snickdx@gmail.com","Hit Count",$msg);
+    }
+    $fp = fopen($count_my_page , "w", "From: snickdx.github.io");
+    fputs($fp , "$hits[0]");
+    fclose($fp);
+?>
 <html lang="en">
 
     <head>
@@ -55,7 +66,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand page-scroll" href="#page-top">
-                        Nicholas Mendez
+                        Nicholas Mendez <?php if(isset($_GET['hits']))echo $hits[0]." HITS";?>
                     </a>
                 </div>
 
