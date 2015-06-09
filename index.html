@@ -1,15 +1,4 @@
-<?php
-    $count_my_page = ("hitcounter.txt");
-    $hits = file($count_my_page);
-    $hits[0]++;
-    if($hits[0]%100==0){
-        $msg = wordwrap($hits[0]." Total visitors on snickdx.github.io!");
-        mail("snickdx@gmail.com","Hit Count",$msg);
-    }
-    $fp = fopen($count_my_page , "w", "From: snickdx.github.io");
-    fputs($fp , "$hits[0]");
-    fclose($fp);
-?>
+<!DOCTYPE html>
 <html lang="en">
 
     <head>
@@ -65,9 +54,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand page-scroll" href="#page-top">
-                        Nicholas Mendez <?php if(isset($_GET['hits']))echo $hits[0]." HITS";?>
-                    </a>
+                    <a class="navbar-brand page-scroll" href="#page-top">Nicholas Mendez</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -112,6 +99,8 @@
                             <h2>Developer Portfolio</h2>
                             <p class="intro-text">Driven, adaptive and fast-learning computer science undergrad always seeking opportunities that put his creativity and passionate desire for serving and
                                 learning to good use.</p>
+                            <!-- Counter Code START --><a href="http://www.e-zeeinternet.com/" target="_blank"><img src="http://www.e-zeeinternet.com/count.php?page=1111522&style=odometer&nbdigits=5" alt="Free Counters" border="0" ></a><!-- Counter Code END -->
+                            <br>
                             <a href="#about" class="btn btn-circle page-scroll">
                                 <i class="fa fa-angle-double-down animated"></i>
                             </a>
