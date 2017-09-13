@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <!--PWA START PREAMBLE-->
+        <meta charset="utf-8">
+        <meta name="description" content="Nicholas Mendez">
+        <meta name="theme-color" content="#8577b1">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+
+        <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+        <link rel="manifest" href="manifest.json">
+
+        <meta name="msapplication-TileColor" content="#8577b1">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#8577b1">
+
+        <!--IOS-->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#8577b1">
+        <meta name="apple-mobile-web-app-title" content="Pieman">
+        <link rel="apple-touch-startup-image" href="img/apple-icon-180x180.png">
+
+        <!--WINDOWS-->
+        <meta name="msapplication-TileImage" content="img/pieman-192.png">
+        <meta name="msapplication-TileColor" content="white">
+        <meta name="msapplication-square310x310logo" content="img/pieman-192.png">
+        <meta name="msapplication-navbutton-color" content="blue">
+
+        <!--WEB-->
+        <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
+        <link rel="icon" sizes="192x192" href="img/android-icon-192x192.png">
+        <link rel="icon" href="img/favicon-16x16.png" type="image/x-icon">
+
+        <!--MANIFEST-->
+        <link rel="manifest" href="manifest.json">
+        <title>Nicholas Mendez</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/grayscale.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="css/carousel.css" rel="stylesheet">
+
+        <style>
+            h2{
+                color:  #42dca3;
+            }
+            td{
+                text-align: left;
+            }
+            .purple{
+                background-color: #8577b1;
+            }
+
+            .panel-default>.panel-heading {
+                background-color:  #42dca3;
+                color: white;
+                 border-color: #ddd;
+            }
+
+        </style>
+
+    </head>
+
+    <script>
+	    if ('serviceWorker' in navigator) {
+		    window.addEventListener('load', function() {
+			    navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+				    // Registration was successful
+				    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			    }, function(err) {
+				    // registration failed :(
+				    console.log('ServiceWorker registration failed: ', err);
+			    });
+		    });
+	    }
+    </script>
+
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top">Nicholas Mendez</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#about">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#projects">Projects</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#work">Other Work</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#competitions">Competitions</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Intro Header -->
+        <header class="intro">
+            <div class="intro-body" style="background: rgba(61, 22, 92, 0.3);">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <br>
+                            <h1 class="Bootstrap-heading">Nicholas Mendez</h1>
+                            <h2>Developer Portfolio</h2>
+                            <p class="intro-text">
+                                Driven, adaptive and fast-learning computer science graduate always seeking opportunities that put his creativity and passionate desire for serving and
+                                learning to good use.
+                            </p>
+                            <br>
+                            <a href="#about" class="btn btn-circle page-scroll">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section id="about" class="container content-section text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>About</h2>
+                    <p>
+                        Throughout my years at the UWI I've been involved in numerous activities and initiatives which have developed myself not only as developer but as an all-rounded individual. I have also undertaken several projects, each one demanding more
+                        than the last with intention of challenging myself to reach beyond what I have been exposed to in undergrad by exploring and learning different technologies, libraries, tools and methodologies in software development.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="content-section text-center">
+
+            <div class=" project-section col-lg-10 col-lg-offset-1 col-sm-12">
+                <h2>Projects</h2>
+
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <!--ITO Group-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                                    Group Manager
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseEight" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body purple">
+
+                                <p>An application which organizes students into groups and assign quizzes to them.</p>
+
+                                <div id="carousel8" class="carousel slide carousel-fade col-md-6 col-md-offset-3" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel8" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel8" data-slide-to="1"></li>
+
+                                    </ol>
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active item"><img src="img/grp1.png"></div>
+                                        <div class="item"><img src="img/grp2.png"></div>
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a class="carousel-control left" href="#carousel8" data-slide="prev">&lsaquo;</a>
+                                    <a class="carousel-control right" href="#carousel8" data-slide="next">&rsaquo;</a>
+                                </div>
+
+                                <!--<table class="table table-responsive">-->
+                                    <!--<thead>-->
+                                    <!--<tr>-->
+                                        <!--<th>Features</th><th>Technologies Used</th><th>Libraries/Frameworks</th>-->
+                                    <!--</tr>-->
+                                    <!--</thead>-->
+                                    <!--<tbody>-->
+                                    <!--<tr>-->
+                                        <!--<td><b>Profile:</b> personal accounts whereby users may gain points by using the system and recycling, which can be redeemed for various rewards (eg hampers, coupons, discounts etc)<br><br> <b>Green Pickup:</b> recyclable pickup request system <br><br> <b>Green Finder: </b>Interactive map of recycling plants, initiatives and events <br><br> <b>Green Feed:</b> An Eco-friendly Community Forum <br><br> <b>Green Terminals:</b> Allowing points to be earned upon using recycling machines <a target="_blank" href="http://www.greenlaunches.com/recycle/pepsis-recycling-machine-gives-little-goodies-for-every-bottle-or-can-recycled.php">Similar Idea</a> </td><td>PHP, JS, CSS, HTML</td><td>Bootstrap, jQuery, Google Maps API</td>-->
+                                    <!--</tr>-->
+                                    <!--</tbody>-->
+                                <!--</table>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--ITO-Quiz-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    Quiz Manager
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body purple">
+
+                                <p>An application for creating quizzes of different formats eg Multiple Choice, Matching columns</p>
+
+                                <div id="carousel7" class="carousel slide carousel-fade col-md-6 col-md-offset-3" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel7" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel7" data-slide-to="1"></li>
+                                        <li data-target="#carousel7" data-slide-to="2"></li>
+                                    </ol>
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active item"><img src="img/ito1.png"></div>
+                                        <div class="item"><img src="img/ito2.png"></div>
+                                        <div class="item"><img src="img/ito3.png"></div>
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a class="carousel-control left" href="#carousel7" data-slide="prev">&lsaquo;</a>
+                                    <a class="carousel-control right" href="#carousel7" data-slide="next">&rsaquo;</a>
+                                </div>
+
+                                <!--<table class="table table-responsive">-->
+                                    <!--<thead>-->
+                                    <!--<tr>-->
+                                        <!--<th>Features</th><th>Technologies Used</th><th>Libraries/Frameworks</th>-->
+                                    <!--</tr>-->
+                                    <!--</thead>-->
+                                    <!--<tbody>-->
+                                    <!--<tr>-->
+                                        <!--<td><b>Profile:</b> personal accounts whereby users may gain points by using the system and recycling, which can be redeemed for various rewards (eg hampers, coupons, discounts etc)<br><br> <b>Green Pickup:</b> recyclable pickup request system <br><br> <b>Green Finder: </b>Interactive map of recycling plants, initiatives and events <br><br> <b>Green Feed:</b> An Eco-friendly Community Forum <br><br> <b>Green Terminals:</b> Allowing points to be earned upon using recycling machines <a target="_blank" href="http://www.greenlaunches.com/recycle/pepsis-recycling-machine-gives-little-goodies-for-every-bottle-or-can-recycled.php">Similar Idea</a> </td><td>PHP, JS, CSS, HTML</td><td>Bootstrap, jQuery, Google Maps API</td>-->
+                                    <!--</tr>-->
+                                    <!--</tbody>-->
+                                <!--</table>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--Trini-Green-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Trini-Green
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body purple">
+
+                                <p>An application which incentivizes recycling and provides services which
+                                    make recycling easier. Winning solution of the YoPro hackathon event.</p>
+
+                                <div id="carousel5" class="carousel slide carousel-fade col-md-6 col-md-offset-3" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel5" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel5" data-slide-to="1"></li>
+                                        <li data-target="#carousel5" data-slide-to="2"></li>
+                                    </ol>
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active item"><img src="img/tg1.png"></div>
+                                        <div class="item"><img src="img/tg2.png"></div>
+                                        <div class="item"><img src="img/tg3.png"></div>
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a class="carousel-control left" href="#carousel5" data-slide="prev">&lsaquo;</a>
+                                    <a class="carousel-control right" href="#carousel5" data-slide="next">&rsaquo;</a>
+                                </div>
+
+                                <table class="table table-responsive">
+                                    <thead>
+                                    <tr>
+                                        <th>Features</th><th>Technologies Used</th><th>Libraries/Frameworks</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><b>Profile:</b> personal accounts whereby users may gain points by using the system and recycling, which can be redeemed for various rewards (eg hampers, coupons, discounts etc)<br><br> <b>Green Pickup:</b> recyclable pickup request system <br><br> <b>Green Finder: </b>Interactive map of recycling plants, initiatives and events <br><br> <b>Green Feed:</b> An Eco-friendly Community Forum <br><br> <b>Green Terminals:</b> Allowing points to be earned upon using recycling machines <a target="_blank" href="http://www.greenlaunches.com/recycle/pepsis-recycling-machine-gives-little-goodies-for-every-bottle-or-can-recycled.php">Similar Idea</a> </td><td>PHP, JS, CSS, HTML</td><td>Bootstrap, jQuery, Google Maps API</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                          </div>
+                        </div>
+                    </div>
+                    <!--AAP-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    AAP - Applicant Assessment Platform
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body purple">
+                                <p>As the final year group project AAP is an application which allows employers to post job openings and find the optimum applicant for the job by
+                                    performing an in-depth custom search on applicants, shortlist the results and compare applicants side by side.</p>
+
+                                <div id="carousel4" class="carousel slide carousel-fade col-md-8 col-md-offset-2" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel4" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel4" data-slide-to="1"></li>
+                                        <li data-target="#carousel4" data-slide-to="2"></li>
+                                        <li data-target="#carousel4" data-slide-to="3"></li>
+                                        <li data-target="#carousel4" data-slide-to="4"></li>
+                                        <li data-target="#carousel4" data-slide-to="5"></li>
+                                        <li data-target="#carousel4" data-slide-to="6"></li>
+                                        <li data-target="#carousel4" data-slide-to="7"></li>
+                                    </ol>
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active item"><img src="img/aap1.png"></div>
+                                        <div class="item"><img src="img/aap2.png"></div>
+                                        <div class="item"><img src="img/aap3.png"></div>
+                                        <div class="item"><img src="img/aap4.png"></div>
+                                        <div class="item"><img src="img/aap5.png"></div>
+                                        <div class="item"><img src="img/aap6.png"></div>
+                                        <div class="item"><img src="img/aap7.png"></div>
+                                        <div class="item"><img src="img/aap8.png"></div>
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a class="carousel-control left" href="#carousel4" data-slide="prev">&lsaquo;</a>
+                                    <a class="carousel-control right" href="#carousel4" data-slide="next">&rsaquo;</a>
+                                </div>
+
+                                <table class="table table-responsive">
+                                    <thead>
+                                    <tr>
+                                        <th>Features</th><th>Technologies Used</th><th>Libraries/Frameworks</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Posting Jobs<br> Searching Applicants <br> Increase an applicants rating by terms found in their CV <br> Search and Sort results <br> Shortlist Applicants <br> Save/Load Searches </td><td>XAMMP server, SQL, PHP, JS, CSS, HTML</td><td>Bootstrap, jQuery, highcharts, <br> smalot, slimPHP, wenzhixin bootstrap table</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                          </div>
+                        </div>
+                    </div>
+                    <!--Budget-Ting-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Budget-Ting
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body purple">
+                                <p>Application submission of the 2nd Place Winner; Team Dawn in the Telios Code Jam Competition 2015. Budget-Ting is an application that manages; dieting, cooking and grocery shopping while allowing the user to save money.</p>
+
+                                <div id="carousel3" class="carousel slide carousel-fade col-md-8 col-md-offset-2" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel3" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel3" data-slide-to="1"></li>
+                                        <li data-target="#carousel3" data-slide-to="2"></li>
+                                        <li data-target="#carousel3" data-slide-to="3"></li>
+                                    </ol>
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active item"><img src="img/login.png"></div>
+                                        <div class="item"><img src="img/diet.png"></div>
+                                        <div class="item"><img src="img/budget.png"></div>
+                                        <div class="item"><img src="img/list.png"></div>
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a class="carousel-control left" href="#carousel3" data-slide="prev">&lsaquo;</a>
+                                    <a class="carousel-control right" href="#carousel3" data-slide="next">&rsaquo;</a>
+                                </div>
+
+                                <table class="table table-responsive">
+                                    <thead>
+                                    <tr>
+                                        <th>Features</th><th>Technologies Used</th><th>Libraries/Frameworks</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Customizing a diet <br> Adjusting budget <br>generate meal list that minimizes wastage <br> generate shopping list</td><td>XAMMP server, SQL, PHP, JS, CSS, HTML</td><td>Google Polymer, jQuery</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="http://snickdx.github.io/unmasq/eventPage.html" target="_blank">
+                    <h3>Unmasqd</h3>
+                </a>
+
+
+            </div>
+
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="content-section text-center" style="margin-top: 25%">
+            <div class="work-section">
+                <div class="container">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h2>Other Work</h2>
+                        <h4>The UWICS</h4>
+                        <img src="img/UWICS%20Logo%20Pro.jpg"  width="30%" class="img img-responsive img-thumbnail" >
+                        <br><br>
+                        <ul class="list-inline banner-social-buttons">
+                            <li>
+                                <a href="https://www.facebook.com/groups/Uwi.Computing.Society/"  target="_blank" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name"></span>Facebook</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/theuwics"  target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/110107557021596810190/about"  target="_blank" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                            </li>
+                        </ul>
+                        <br><br>
+                        <p>
+                            The University of The West Indies Computing Society (UWICS) is an ever evolving association founded in 1996 with the goal of
+                            becoming a platform to expose members to opportunities for competition, learning and greater involvement in the computing and technology industry.
+                        </p><br>
+                        <ul style="text-align: left">
+                            <li><h5 style="margin: 0px 0px 10px">Club PRO 2012-2013</h5></li>
+                            <li><h5 style="margin: 0px 0px 10px">Club President 2013-2014</h5></li>
+                            <li><h5 style="margin: 0 0 10px">Club Treasurer 2014-2015</h5></li>
+                        </ul>
+                        <br><br><br>
+                        <h4>UWI Jammers</h4>
+                        <img src="img/jammers.jpg"  width="35%" class="img img-responsive img-thumbnail" >
+                        <br><br>
+                        <p>
+                            Using technology to have fun while learning. Jammers' goal is to provide a space that will encourage students and alumni of computing fields (CS, IT, ECE)
+                            to explore new technologies and push the boundary of what we think is possible in our side of the world. Throughout my undergrad I have participated in the numerous
+                            events and sessions put on by the Jammers as an attendee and as a facilitator.
+                        </p>
+
+                        <br><br><br>
+                        <h4>Coder Dojo</h4>
+                        <img src="img/coder%20dojo.jpg"  width="35%" class="img img-responsive img-thumbnail" >
+                        <br><br>
+                        <p>
+                            Coder Dojo is an international initiative where by children and teenagers are taught programming.
+                            I had the privilege of participating as a mentor in the Caribbean's first Coder Dojo held In UWI St.Augustine, by The Department of Computing & IT and Digicel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Competitions -->
+        <section id="competitions" class="content-section text-center">
+            <div class="work-section">
+                <div class="container">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h2>Competitions</h2>
+
+                        <h4><a href="https://www.hackerleague.org/hackathons/yopro-tt-hackathon" target="_blank">YoPro Hackathon 2015</a></h4>
+                        <p>
+                            A coding competitions where independent developers must create an application which addresses waste management in our country
+                            in the small time frame of 7 hours. My submission was the Trini-Green application.
+                        </p>
+                        <h5>Competition Winner</h5>
+                        <br><br>
+
+                        <h4><a href="http://blogs.iadb.org/caribbean-dev-trends/2015/02/08/devca-2015-open-data-conference-code-sprint/" target="_blank">DevCa Code Sprint</a></h4>
+                        <p>
+                            A coding competition held by The Developing Caribbean where teams were given just 24 hours to make an application
+                            making use of open datasets provided. Our solution comprised of an application which made use of TATT datasets which
+                            displayed cell tower radiation levels across the country as an example of an Open App, (open source
+                            software build with open data) hosted on website we called the Appertus Platform.
+                        </p>
+                        <h5>2nd Place Winner</h5>
+                        <br><br>
+
+
+                        <h4><a href="http://www.teleioscodejam.com/" target="_blank">Teleios Code Jam 2014</a></h4>
+                        <p>
+                            A software development competition where teams submit applications under the year's theme: Internet of things
+                            which solves a particular problem. I belonged to Team Dawn and our entry was Budget-Ting.
+                        </p>
+                        <ul style="text-align: left">
+                            <li><h5 style="margin: 0px 0px 10px">Best Presentation</h5></li>
+                            <li><h5 style="margin: 0px 0px 10px">Best Code Challenge</h5></li>
+                            <li><h5 style="margin: 0px 0px 10px">2nd Place Winner</h5></li>
+                        </ul>
+                        <br><br>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container content-section text-center">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Contact Me</h2>
+                    <p>Feel free to email me if you are interested having me join your workforce, group, initiative or to just say hello!</p>
+                    <p><a href="mailto:snickdx@gmail.com">snickdx@gmail.com</a>
+                    </p>
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="http://tt.linkedin.com/in/snickdx/en"  target="_blank" class="btn btn-default btn-lg"><i class="fa fa-linkedin-square fa-fw"></i> <span class="network-name"></span>LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="http://www.github.com/snickdx"  target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/users/story/3264643"  target="_blank" class="btn btn-default btn-lg"><i class="fa fa-stack-overflow fa-fw"></i> <span class="network-name">Developer Story</span></a>
+                        </li>
+                        <li>
+                            <a href="resume.pdf"  target="_blank" class="btn btn-default btn-lg"><i class="fa fa-file-pdf-o fa-fw"></i> <span class="network-name">Resume</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--&lt;!&ndash; Map Section &ndash;&gt;-->
+        <!--<div id="map"></div>-->
+
+        <!-- Footer -->
+        <footer>
+            <div class="container text-center">
+                <p>Copyright &copy; snickdx.github.io 2015</p>
+            </div>
+        </footer>
+
+        <!-- jQuery -->
+        <script src="vendor/jquery.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="vendor/bootstrap.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery.easing.min.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="js/grayscale.js"></script>
+
+        <script>
+            $('.carousel').carousel();
+        </script>
+    </body>
+
+</html>

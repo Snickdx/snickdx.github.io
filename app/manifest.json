@@ -1,0 +1,23 @@
+{
+  "name": "Nicholas Mendez",
+  "short_name": "Portfolio",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#8577b1",
+  "theme_color": "#8577b1",
+  "orientation": "portrait",
+  "gcm_sender_id":"103953800507",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "img/apple-icon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "img/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
